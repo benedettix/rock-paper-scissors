@@ -1,0 +1,40 @@
+.scoreboard {
+  background-color: transparent;
+  display: flex;
+  padding: 20px;
+  margin: 30px;
+  border-radius: 15px;
+  border: 2px solid #fff;
+  color: #fff;
+  width: 500px;
+  justify-content: space-between;
+
+  h3 {
+    font-weight: bold;
+    margin: 5px 0;
+  }
+
+  &__right {
+    background-color: #fff;
+    border-radius: 15px;
+    color: black;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h3 {
+      font-size: 20px;
+      margin: 0;
+      margin-bottom: 15px;
+    }
+    h4 {
+      font-size: 35px;
+      font-weight: bolder;
+      margin: 0;
+    }
+  }
+  &--green {
+    background-color: green;
+  }
+}

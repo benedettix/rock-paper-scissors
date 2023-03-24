@@ -1,0 +1,20 @@
+.username {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  input {
+    border: none;
+    padding: 15px;
+    outline: none;
+    border-radius: 15px;
+  }
+  a {
+    margin-left: 15px;
+    padding: 10px;
+    color: black;
+    background-color: white;
+    text-decoration: none;
+    border-radius: 15px;
+  }
+}

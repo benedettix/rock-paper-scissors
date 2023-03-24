@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import { useSelector, useDispatch } from "react-redux";
+import "./App.css";
+import Game from "./pages/Game";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+  useNavigate,
+} from "react-router-dom";
+import Username from "./pages/Username";
+import { useEffect } from "react";
 
 function App() {
+  // const dispatch = useDispatch();
+  const name = useSelector((state) => state.counter.name);
+
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <>
+        <Route path="/" element={<Game />} />
+
+        <Route path="/name" element={<Username />} />
+      </>
+    )
+  );
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <RouterProvider router={router} />
     </div>
   );
 }

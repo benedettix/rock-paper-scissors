@@ -1,0 +1,101 @@
+.scoreboard__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  button {
+    background-color: #fff;
+    color: black;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-right: 15px;
+  }
+}
+
+.game {
+  display: flex;
+  justify-content: space-between;
+  &__draw {
+    h3 {
+      color: yellow;
+      font-weight: bold;
+      font-size: 40px;
+      text-align: center;
+    }
+  }
+  &__left {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    #leftRock {
+      top: 0;
+      position: absolute;
+      left: -25px;
+      &:hover {
+        left: 0px;
+      }
+    }
+
+    #leftPaper {
+      top: 200px;
+      position: absolute;
+      left: -25px;
+      &:hover {
+        left: 0;
+      }
+    }
+
+    #leftScissors {
+      top: 400px;
+      left: -25px;
+      position: absolute;
+      &:hover {
+        left: 0;
+      }
+    }
+
+    img {
+      width: 290px;
+      transition: 0.2s ease-in-out;
+
+      cursor: pointer;
+    }
+    &__slide {
+      margin-left: 30vw;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    #rightRock {
+      top: 0;
+      position: absolute;
+      right: -25px;
+    }
+
+    #rightPaper {
+      top: 200px;
+      position: absolute;
+      right: -25px;
+    }
+
+    #rightScissors {
+      top: 400px;
+      right: -25px;
+      position: absolute;
+    }
+
+    img {
+      width: 290px;
+      transition: 0.2s ease-in-out;
+    }
+    &__slide {
+      margin-right: 30vw;
+    }
+  }
+}
